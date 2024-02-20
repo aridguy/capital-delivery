@@ -1,135 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Capital Delivery - Cargo, Logistics & Transport - Track orders</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-        <!-- Place favicon.ico in the root directory -->
-		<!-- CSS here -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/nice-select.css">
-        <link rel="stylesheet" href="css/flaticon.css">
-        <link rel="stylesheet" href="css/meanmenu.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="sweetalert2.min.js"></script>
-<link rel="stylesheet" href="sweetalert2.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      Capital Delivery - Cargo, Logistics & Transport - Track orders
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/meanmenu.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
 
-<!-- translaTE -->
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  }
-</script>
-    </head>
-    <body>
-
-        <!-- preloader  -->
-        <div id="preloader">
-            <div id="ctn-preloader" class="ctn-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-                    <div class="txt-loading">
-                        <span data-text-preloader="C" class="letters-loading">
-                            C
-                        </span>
-                        <span data-text-preloader="A" class="letters-loading">
-                           A
-                        </span>
-                        <span data-text-preloader="P" class="letters-loading">
-                            P
-                        </span>
-                        <span data-text-preloader="I" class="letters-loading">
-                            I
-                        </span>
-                        <span data-text-preloader="T" class="letters-loading">
-                            T
-                        </span>
-                        <span data-text-preloader="A" class="letters-loading">
-                            A
-                        </span>
-                        <span data-text-preloader="L" class="letters-loading">
-                            L
-                        </span>
-                        <span data-text-preloader="" class="letters-loading">
-                            &nbsp; &nbsp;
-                        </span>
-                        <span data-text-preloader="D" class="letters-loading">
-                            D
-                        </span>
-                        <span data-text-preloader="E" class="letters-loading">
-                            E
-                        </span>
-                        <span data-text-preloader="L" class="letters-loading">
-                            L
-                        </span>
-                        <span data-text-preloader="I" class="letters-loading">
-                            I
-                        </span>
-                        <span data-text-preloader="V" class="letters-loading">
-                            V
-                        </span>
-                        <span data-text-preloader="E" class="letters-loading">
-                            E
-                        </span>
-                        <span data-text-preloader="R" class="letters-loading">
-                            R
-                        </span>
-                        <span data-text-preloader="Y" class="letters-loading">
-                            Y
-                        </span>
-
-                    </div>
-                </div>
-                <div class="loader">
-                    <div class="row">
-                        <div class="col-3 loader-section section-left">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-left">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-right">
-                            <div class="bg"></div>
-                        </div>
-                        <div class="col-3 loader-section section-right">
-                            <div class="bg"></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- translaTE -->
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <!-- header-start -->
+    <header>
+      <div class="header-top-wrap purple-bg d-none d-md-block">
+        <div class="container-fluid header-container-p">
+          <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-6">
+              <div class="header-contact">
+                <ul>
+                  <li>
+                    <i class="fas fa-headphones"></i>Call us +654 3048 9658
+                  </li>
+                  <li>
+                    <i class="far fa-envelope"></i>capitaldelivery@info.com
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker"></i>Unit 7B, Swallowfields
+                  </li>
+                </ul>
+              </div>
             </div>
-        </div>
-        <!-- preloader end -->
-
-        <!-- header-start -->
-        <header>
-            <div class="header-top-wrap purple-bg d-none d-md-block">
-                <div class="container-fluid header-container-p">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-7 col-md-6">
-                            <div class="header-contact">
-                                <ul>
-                                    <li><i class="fas fa-headphones"></i>Call us +654 3048 9658</li>
-                                    <li><i class="far fa-envelope"></i>capitaldelivery@info.com</li>
-                                    <li><i class="fas fa-map-marker"></i>Unit 7B, Swallowfields</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-5 col-md-6">
-                            <div class="header-top-right d-flex justify-content-end align-items-center">
-                                <div id="google_translate_element"></div>
-                               <!--  <div class="header-country">
+            <div class="col-xl-6 col-lg-5 col-md-6">
+              <div
+                class="header-top-right d-flex justify-content-end align-items-center"
+              >
+                <div id="google_translate_element"></div>
+                <!--  <div class="header-country">
                                     <form action="#">
                                         <select name="name" class="selected">
                                             <option value="">New York</option>
@@ -139,516 +77,583 @@
                                         </select>
                                     </form>
                                 </div> -->
-                                <div class="header-social">
-                                    <ul>
-                                        <li>Follow us :</li>
-                                        <li><a title="ico"href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a title="ico"href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a title="ico"href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        <li><a title="ico"href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="header-social">
+                  <ul>
+                    <li>Follow us :</li>
+                    <li>
+                      <a title="ico" href="#"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#"
+                        ><i class="fab fa-pinterest-p"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div id="header-sticky" class="main-header">
-                <div class="container-fluid header-container-p">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="logo">
-                                <a title="ico"href="index.html">
-                                    <img width="100px" src="img/logo/logo.png" class="mobile-logo desktop-logo" alt="Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-6 d-none d-md-block">
-                            <div class="menu-area">
-                                <div class="main-menu">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="active">
-                                                <a title="ico"href="index.html">Home</a>
-                                            </li>
-                                            <li><a title="ico"href="about-us.html">Company</a></li>
-                                            <!-- <li><a title="ico"href="tracking.html">Tracking</a></li> -->
-                                            <!-- data-toggle="modal" data-target="#exampleModalLong" -->
-                                            <li><a title="ico"href="support.html">Support</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            
-                                <div class="header-btn">
-                                    <a title="ico"href="tracking.html" class="btn"><img src="img/icon/calculator-symbols.png" alt="icon">TRACK ITEMS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile-menu"></div>
-                        </div>
-                    </div>
-                  
-                </div>
+      <div id="header-sticky" class="main-header">
+        <div class="container-fluid header-container-p">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-md-6">
+              <div class="logo">
+                <a title="ico" href="index.html">
+                  <img
+                    width="100px"
+                    src="img/logo/logo.png"
+                    class="mobile-logo desktop-logo"
+                    alt="Logo"
+                  />
+                </a>
+              </div>
             </div>
-        </header>
-        <!-- header-start-end -->
-
-        <!-- main-area -->
-        <main>
-
-            <!-- slider-area -->
-            <section class="slider-area">
-                <div class="slider-active">
-                    <div class="single-slider slider-bg d-flex align-items-center">
-                        <div class="slider-overlay-bg"></div>
-                        <div class="slider-bg-shape"></div>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-10 col-lg-11">
-                                    <div class="slider-content text-center">
-                                        <h2 data-animation="fadeInUpS" data-delay=".3s">Capital Delivery</h2>
-                                        <p data-animation="fadeInUpS" data-delay=".6s">All items in our diposal are delivered in a timely and cost-effective manner...</p>
-                                        <div id="trackss" class="slider-form" data-animation="fadeInUpS" data-delay=".9s">
-                                            <form id="myForm">
-                                            <input id="trackPlace" type="text" placeholder="Tracking id" maxlength="20">
-                                            <button type="submit" class="btn">Tracking</button>
-                                        </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-slider slider-bg slider-video-overlay d-flex align-items-center youtube-bg" data-property="{videoURL:'enKKcVrPGs0',}">
-                        <div class="slider-overlay-bg"></div>
-                        <div class="slider-bg-shape"></div>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-10 col-lg-11">
-                                    <div class="slider-content text-center">
-                                        <h2 data-animation="fadeInUpS" data-delay=".3s">Capital Delivery</h2>
-                                        <p data-animation="fadeInUpS" data-delay=".6s">Explore ways to become more efficient, see printing offers and solutions
-                                            insights and inspiration for your small business.</p>
-                                        <div class="slider-form" data-animation="fadeInUpS" data-delay=".9s">
-                                            <!-- <form id="myForm">
-                                            <input id="trackPlace" type="text" placeholder="Tracking id">
-                                            <button type="submit"  class="btn">Tracking</button>
-                                        </form> -->
-
-                                        <script>
-                                            document.getElementById('myForm').addEventListener('submit', function(event) {
-                                                event.preventDefault(); // Prevent the default form submission behavior
-                                                let trackBox = document.getElementById('trackPlace').value
-                                                
-                                                if (trackBox < 8) {
-                                                    Swal.fire({
-                                                      title: "Check again",
-                                                      text: "track number is not correct",
-                                                      // icon: "question"
-                                                    });
-                                                } else{
-                                                   let timerInterval;
-                                            Swal.fire({
-                                              title: "Tracking your Percel",
-                                              html: "checking in <b></b> seconds.",
-                                              timer: 10000,
-                                              timerProgressBar: true,
-                                              didOpen: () => {
-                                                Swal.showLoading();
-                                                const timer = Swal.getPopup().querySelector("b");
-                                                timerInterval = setInterval(() => {
-                                                  timer.textContent = `${Swal.getTimerLeft()}`;
-                                                }, 100);
-                                              },
-                                              willClose: () => {
-                                                clearInterval(timerInterval);
-                                              }
-                                            }).then((result) => {
-                                              /* Read more about handling dismissals below */
-                                              if (result.dismiss === Swal.DismissReason.timer) {
-                                                // alert("I was closed by the timer");
-                                                 Swal.fire({
-                                                      title: "The Internet?",
-                                                      text: "couldn't track at the moment",
-                                                      // icon: "question"
-                                                    });
-                                              }
-                                            });
-                                                }
-
-                                                
-                                                // Add your form submission logic here, such as sending data to a server
-                                               
-                                                                                
-                                                // Example: log form data
-                                                const formData = new FormData(this);
-                                                for (const [name, value] of formData.entries()) {
-                                                    console.log(`${name}: ${value}`);
-                                                }
-                                            });
-                                        </script>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-9 col-md-6 d-none d-md-block">
+              <div class="menu-area">
+                <div class="main-menu">
+                  <nav id="mobile-menu">
+                    <ul>
+                      <li class="active">
+                        <a title="ico" href="index.html">Home</a>
+                      </li>
+                      <li><a title="ico" href="about-us.html">Company</a></li>
+                      <!-- <li><a title="ico"href="tracking.html">Tracking</a></li> -->
+                      <!-- data-toggle="modal" data-target="#exampleModalLong" -->
+                      <li><a title="ico" href="support.html">Support</a></li>
+                    </ul>
+                  </nav>
                 </div>
-            </section>
-            <!-- slider-area-end -->
 
-            <!-- category-area -->
-            <section class="category-area">
-                <div class="container">
-                    <div class="category-bg">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="category-list">
-                                    <ul>
-                                        <li>
-                                            <a title="ico"href="#">
-                                                <div class="category-icon">
-                                                    <i class="flaticon-cruise"></i>
-                                                </div>
-                                                <h5>Sea Freight</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="ico"href="service-air.html">
-                                                <div class="category-icon">
-                                                    <i class="flaticon-air-freight"></i>
-                                                </div>
-                                                <h5>Air Freight</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="ico"href="#">
-                                                <div class="category-icon">
-                                                    <i class="flaticon-delivery-1"></i>
-                                                </div>
-                                                <h5>Tracking</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="ico"href="#">
-                                                <div class="category-icon">
-                                                    <i class="flaticon-warehouse"></i>
-                                                </div>
-                                                <h5>Warehousing</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a title="ico"href="#">
-                                                <div class="category-icon">
-                                                    <i class="flaticon-package"></i>
-                                                </div>
-                                                <h5>Forwarding</h5>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="header-btn">
+                  <a title="ico" href="tracking.html" class="btn"
+                    ><img
+                      src="img/icon/calculator-symbols.png"
+                      alt="icon"
+                    />TRACK ITEMS</a
+                  >
                 </div>
-            </section>
-            <!-- category-area-end -->
-
-            <!-- about-area -->
-            <section class="about-area about-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="about-active">
-                                <div class="single-about-wrap">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-6">
-                                            <div class="about-img">
-                                              <img title="t" src="https://cdn.businessday.ng/2022/09/Climate-challenges.png" width="100%">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="about-content">
-                                                <div class="section-title about-title mb-25">
-                                                    <h2>Digital & Trusted Transport Logistic Company</h2>
-                                                    <!-- <h6>Express delivery is an innovative service</h6> -->
-                                                </div>
-                                                <p>We have a deep commitment to always delivering first-class service. Whether we’re in the office, the warehouse, or on the road, our six core values drive us..</p>
-                                                <a title="ico"href="support.html" class="btn">Contact Us</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- about-area-end -->
-
-            <!-- services-area -->
-            <section class="services-area pt-115 pb-90">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-8 col-lg-10">
-                            <div class="section-title text-center mb-60">
-                                <h6>Delivery innovative service</h6>
-                                <h2>About Capital Delivery</h2>
-                                <p>Dedicated to efficient cargo delivery, and tracking, we prioritize reliability and timely service. Our commitment ensures your goods reach their destination seamlessly, fostering trust and satisfaction.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-wrapper">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single-services mb-30">
-                                    <div class="services-thumb">
-                                        <a title="ico"href="#">
-                                            <img title="t" src="https://img.freepik.com/premium-photo/back-view-foreman-control-loading-containers-box-from-cargo-freight-ship-import-export_629685-4063.jpg">
-                                        </a>
-                                    </div>
-                                    <div class="services-content">
-                                        <div class="services-icon">
-                                            <i class="flaticon-shipping-and-delivery"></i>
-                                        </div>
-                                        <h3><a title="ico"href="#">More Control, for Free</a></h3>
-                                        <span>Delivery Service</span>
-                                        <p>Enhanced autonomy and features without additional cost or restrictions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single-services mb-30">
-                                    <div class="services-thumb">
-                                        <a title="ico"href="#">
-                                            <img title="t" src="https://img.freepik.com/premium-photo/foreman-control-industrial-container-cargo-freight-ship-industry-transportation-logistic_35752-5104.jpg?size=626&ext=jpg">
-                                        </a>
-                                    </div>
-                                    <div class="services-content">
-                                        <div class="services-icon">
-                                            <i class="flaticon-shipping"></i>
-                                        </div>
-                                        <h3><a title="ico"href="#">Expand with E-Commerce</a></h3>
-                                        <span>Delivery Service</span>
-                                        <p>
-                                            Integrate E-Commerce for expanded online shopping capabilities.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single-services mb-30">
-                                    <div class="services-thumb">
-                                        <a title="ico"href="#">
-                                            <img title="t" src="https://www.thecooperativelogisticsnetwork.com/blog/wp-content/uploads/2022/06/aerial-view-container-cargo-ship-sea_335224-735.webp">
-                                        </a>
-                                    </div>
-                                    <div class="services-content">
-                                        <div class="services-icon">
-                                            <i class="flaticon-location"></i>
-                                        </div>
-                                        <h3><a title="ico"href="#">More Than Anywhere Shipping</a></h3>
-                                        <span>Delivery Service</span>
-                                        <p>
-                                            Unmatched shipping options, surpassing any other service.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- services-area-end -->
-
-            
-
-            <!-- fact-area -->
-            <section class="fact-area position-relative pt-115">
-                <div class="fact-bg"></div>
-                <div class="container">
-                    
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="single-fact mb-50">
-                                <div class="fact-icon mb-25">
-                                    <i class="flaticon-package"></i>
-                                </div>
-                                <div class="fact-content">
-                                    <h4><span class="count">25</span> k</h4>
-                                    <h6>Package Delivered</h6>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="single-fact mb-50">
-                                <div class="fact-icon mb-25">
-                                    <i class="flaticon-placeholder"></i>
-                                </div>
-                                <div class="fact-content">
-                                    <h4><span class="count">300</span> +</h4>
-                                    <h6>Total Branch</h6>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="single-fact mb-50">
-                                <div class="fact-icon mb-25">
-                                    <i class="flaticon-user"></i>
-                                </div>
-                                <div class="fact-content">
-                                    <h4><span class="count">500</span> k</h4>
-                                    <h6>Happy Clients</h6>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                            <div class="single-fact mb-50">
-                                <div class="fact-icon mb-25">
-                                    <i class="flaticon-like"></i>
-                                </div>
-                                <div class="fact-content">
-                                    <h4><span class="count">37</span> Yrs</h4>
-                                    <h6>Year Experience</h6>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- fact-area-end -->
-
-            <!-- extra-features -->
-            <section class="extra-features ef-md-padding pb-115 fix pt-65">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-6">
-                            <div class="section-title mb-25">
-                                s
-                                <h2>Explore Airtrans Services
-                                Control <span>Shiping</span></h2>
-                            </div>
-                            <div class="extra-features-content">
-                                <h5>Embark on a journey with Capital Delivery, where you explore unparalleled shipping solutions. </h5>
-                                <p>Our commitment to control shipping ensures efficient, secure, and reliable transportation of goods, providing you with comprehensive logistics support for a seamless and dependable supply chain.</p>
-                                <a title="ico"href="#" class="btn">Get Fare Rate</a>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-6">
-                            <div class="extra-features-img">
-                                <img src="https://www.chambers.law/wp-content/uploads/2020/03/cargo-shipping-companies-cyprus.jpg" class="wow bounceInDown" data-wow-delay=".4s" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- extra-features-end -->
-
-            <!-- brand-area -->
-            <div class="brand-area pt-120 pb-120">
-                <div class="container">
-                    <div class="row brand-active">
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo01.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo02.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo03.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo04.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo05.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="signle-brand">
-                                <img src="img/brand/brnad_logo03.png" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- brand-area-end -->
-
-            <!-- newsletter -->
-            <section class="newsletter-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="newsletter-wrap">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="newsletter-content">
-                                            <h4>Newsletter Sign Up</h4>
-                                            <span>Notifications our best deals...</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="newsletter-form">
-                                            <form action="#">
-                                                <input type="email" placeholder="Enter your email...">
-                                                <button type="button" class="btn">subscribe</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- newsletter-end -->
-
-        </main>
-        <!-- main-area-end -->
-
-        <!-- footer -->
-        <footer>
-            <div class="footer-wrap pt-190 pb-40" data-background="img/bg/footer_bg.jpg">
-                <div class="container">
-                    <div class="row text-center align-items-center">
-                       <span class="text-white">
-                           Capital Delivery is your premier logistics partner, specializing in swift and secure transportation solutions. With a focus on efficiency and reliability, we navigate through the intricacies of supply chain management to ensure your goods reach their destination on time. Our state-of-the-art tracking systems provide real-time visibility, while our dedicated team of professionals ensures the safe handling of your cargo. Whether it's local or international, Capital Delivery is committed to delivering excellence, making us the preferred choice for businesses seeking a trusted and seamless logistics experience. Your satisfaction is our priority, and your cargo is in capable hands with Capital Delivery.
-                       </span>
-                        </div>
-                    </div>
-                </div>
-            <div class="copyright-wrap">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-12 col-md-7">
-                              <div class="copyright-text text-center fs-2">
-                                <p>Copyright© <span>Capital Delivery </span> | All Rights Reserved</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+            <div class="col-12">
+              <div class="mobile-menu"></div>
             </div>
-        </footer>
-        <!-- footer-end -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header-start-end -->
 
+    <!-- main-area -->
+    <main>
+      <!-- slider-area -->
+      <section class="slider-area">
+        <div class="slider-active">
+          <div class="single-slider slider-bg d-flex align-items-center">
+            <div class="slider-overlay-bg"></div>
+            <div class="slider-bg-shape"></div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11">
+                  <div class="slider-content text-center">
+                    <h2 data-animation="fadeInUpS" data-delay=".3s">
+                      Capital Delivery
+                    </h2>
+                    <p data-animation="fadeInUpS" data-delay=".6s">
+                      All items in our diposal are delivered in a timely and
+                      cost-effective manner...
+                    </p>
+                    <div
+                      id="trackss"
+                      class="slider-form"
+                      data-animation="fadeInUpS"
+                      data-delay=".9s"
+                    >
+                      <form id="myForm">
+                        <input
+                          id="trackPlace"
+                          type="text"
+                          placeholder="Tracking id"
+                          maxlength="20"
+                        />
+                        <button type="submit" class="btn">Tracking</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- slider-area-end -->
+      <script>
+        document
+          .getElementById("myForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            let trackBox = document.getElementById("trackPlace").value;
 
-        <!-- <button class="btn btn-warning">check swall functions</button> -->
-      <!--   <script>
+            if (trackBox < 8) {
+              Swal.fire({
+                title: "Check again",
+                text: "track number is not correct",
+                // icon: "question"
+              });
+            } else {
+              let timerInterval;
+              Swal.fire({
+                title: "Tracking your Percel",
+                html: "checking in <b></b> seconds.",
+                timer: 7000,
+                timerProgressBar: true,
+                didOpen: () => {
+                  Swal.showLoading();
+                  const timer = Swal.getPopup().querySelector("b");
+                  timerInterval = setInterval(() => {
+                    timer.textContent = `${Swal.getTimerLeft()}`;
+                  }, 100);
+                },
+                willClose: () => {
+                  clearInterval(timerInterval);
+                },
+              }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                  // alert("I was closed by the timer");
+                  Swal.fire({
+                    title: "Bad Connection?",
+                    text: "couldn't track at the moment",
+                    footer: '<a href="tracking.html">go to tracking page</a>'
+                    // icon: "question"
+                  });
+                }
+              });
+            }
+
+            // Add your form submission logic here, such as sending data to a server
+
+            // Example: log form data
+            const formData = new FormData(this);
+            for (const [name, value] of formData.entries()) {
+              console.log(`${name}: ${value}`);
+            }
+          });
+      </script>
+
+      <!-- category-area -->
+      <section class="category-area">
+        <div class="container">
+          <div class="category-bg">
+            <div class="row">
+              <div class="col-12">
+                <div class="category-list">
+                  <ul>
+                    <li>
+                      <a title="ico" href="#">
+                        <div class="category-icon">
+                          <i class="flaticon-cruise"></i>
+                        </div>
+                        <h5>Sea Freight</h5>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="ico" href="service-air.html">
+                        <div class="category-icon">
+                          <i class="flaticon-air-freight"></i>
+                        </div>
+                        <h5>Air Freight</h5>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#">
+                        <div class="category-icon">
+                          <i class="flaticon-delivery-1"></i>
+                        </div>
+                        <h5>Tracking</h5>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#">
+                        <div class="category-icon">
+                          <i class="flaticon-warehouse"></i>
+                        </div>
+                        <h5>Warehousing</h5>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="ico" href="#">
+                        <div class="category-icon">
+                          <i class="flaticon-package"></i>
+                        </div>
+                        <h5>Forwarding</h5>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- category-area-end -->
+
+      <!-- about-area -->
+      <section class="about-area about-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="about-active">
+                <div class="single-about-wrap">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="about-img">
+                        <img
+                          title="t"
+                          src="https://cdn.businessday.ng/2022/09/Climate-challenges.png"
+                          width="100%"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="about-content">
+                        <div class="section-title about-title mb-25">
+                          <h2>Digital & Trusted Transport Logistic Company</h2>
+                          <!-- <h6>Express delivery is an innovative service</h6> -->
+                        </div>
+                        <p>
+                          We have a deep commitment to always delivering
+                          first-class service. Whether we’re in the office, the
+                          warehouse, or on the road, our six core values drive
+                          us..
+                        </p>
+                        <a title="ico" href="support.html" class="btn"
+                          >Contact Us</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about-area-end -->
+
+      <!-- services-area -->
+      <section class="services-area pt-115 pb-90">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+              <div class="section-title text-center mb-60">
+                <h6>Delivery innovative service</h6>
+                <h2>About Capital Delivery</h2>
+                <p>
+                  Dedicated to efficient cargo delivery, and tracking, we
+                  prioritize reliability and timely service. Our commitment
+                  ensures your goods reach their destination seamlessly,
+                  fostering trust and satisfaction.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="services-wrapper">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="single-services mb-30">
+                  <div class="services-thumb">
+                    <a title="ico" href="#">
+                      <img
+                        title="t"
+                        src="https://img.freepik.com/premium-photo/back-view-foreman-control-loading-containers-box-from-cargo-freight-ship-import-export_629685-4063.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="services-content">
+                    <div class="services-icon">
+                      <i class="flaticon-shipping-and-delivery"></i>
+                    </div>
+                    <h3><a title="ico" href="#">More Control, for Free</a></h3>
+                    <span>Delivery Service</span>
+                    <p>
+                      Enhanced autonomy and features without additional cost or
+                      restrictions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="single-services mb-30">
+                  <div class="services-thumb">
+                    <a title="ico" href="#">
+                      <img
+                        title="t"
+                        src="https://img.freepik.com/premium-photo/foreman-control-industrial-container-cargo-freight-ship-industry-transportation-logistic_35752-5104.jpg?size=626&ext=jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="services-content">
+                    <div class="services-icon">
+                      <i class="flaticon-shipping"></i>
+                    </div>
+                    <h3><a title="ico" href="#">Expand with E-Commerce</a></h3>
+                    <span>Delivery Service</span>
+                    <p>
+                      Integrate E-Commerce for expanded online shopping
+                      capabilities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="single-services mb-30">
+                  <div class="services-thumb">
+                    <a title="ico" href="#">
+                      <img
+                        title="t"
+                        src="https://www.thecooperativelogisticsnetwork.com/blog/wp-content/uploads/2022/06/aerial-view-container-cargo-ship-sea_335224-735.webp"
+                      />
+                    </a>
+                  </div>
+                  <div class="services-content">
+                    <div class="services-icon">
+                      <i class="flaticon-location"></i>
+                    </div>
+                    <h3>
+                      <a title="ico" href="#">More Than Anywhere Shipping</a>
+                    </h3>
+                    <span>Delivery Service</span>
+                    <p>
+                      Unmatched shipping options, surpassing any other service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- services-area-end -->
+
+      <!-- fact-area -->
+      <section class="fact-area position-relative pt-115">
+        <div class="fact-bg"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="single-fact mb-50">
+                <div class="fact-icon mb-25">
+                  <i class="flaticon-package"></i>
+                </div>
+                <div class="fact-content">
+                  <h4><span class="count">25</span> k</h4>
+                  <h6>Package Delivered</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="single-fact mb-50">
+                <div class="fact-icon mb-25">
+                  <i class="flaticon-placeholder"></i>
+                </div>
+                <div class="fact-content">
+                  <h4><span class="count">300</span> +</h4>
+                  <h6>Total Branch</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="single-fact mb-50">
+                <div class="fact-icon mb-25">
+                  <i class="flaticon-user"></i>
+                </div>
+                <div class="fact-content">
+                  <h4><span class="count">500</span> k</h4>
+                  <h6>Happy Clients</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+              <div class="single-fact mb-50">
+                <div class="fact-icon mb-25">
+                  <i class="flaticon-like"></i>
+                </div>
+                <div class="fact-content">
+                  <h4><span class="count">37</span> Yrs</h4>
+                  <h6>Year Experience</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- fact-area-end -->
+
+      <!-- extra-features -->
+      <section class="extra-features ef-md-padding pb-115 fix pt-65">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-5 col-lg-6">
+              <div class="section-title mb-25">
+                s
+                <h2>Explore Airtrans Services Control <span>Shiping</span></h2>
+              </div>
+              <div class="extra-features-content">
+                <h5>
+                  Embark on a journey with Capital Delivery, where you explore
+                  unparalleled shipping solutions.
+                </h5>
+                <p>
+                  Our commitment to control shipping ensures efficient, secure,
+                  and reliable transportation of goods, providing you with
+                  comprehensive logistics support for a seamless and dependable
+                  supply chain.
+                </p>
+                <a title="ico" href="#" class="btn">Get Fare Rate</a>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-6">
+              <div class="extra-features-img">
+                <img
+                  src="https://www.chambers.law/wp-content/uploads/2020/03/cargo-shipping-companies-cyprus.jpg"
+                  class="wow bounceInDown"
+                  data-wow-delay=".4s"
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- extra-features-end -->
+
+      <!-- brand-area -->
+      <div class="brand-area pt-120 pb-120">
+        <div class="container">
+          <div class="row brand-active">
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo01.png" alt="img" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo02.png" alt="img" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo03.png" alt="img" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo04.png" alt="img" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo05.png" alt="img" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="signle-brand">
+                <img src="img/brand/brnad_logo03.png" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-area-end -->
+
+      <!-- newsletter -->
+      <section class="newsletter-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="newsletter-wrap">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <div class="newsletter-content">
+                      <h4>Newsletter Sign Up</h4>
+                      <span>Notifications our best deals...</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="newsletter-form">
+                      <form action="#">
+                        <input type="email" placeholder="Enter your email..." />
+                        <button type="button" class="btn">subscribe</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- newsletter-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer -->
+    <footer>
+      <div
+        class="footer-wrap pt-190 pb-40"
+        data-background="img/bg/footer_bg.jpg"
+      >
+        <div class="container">
+          <div class="row text-center align-items-center">
+            <span class="text-white">
+              Capital Delivery is your premier logistics partner, specializing
+              in swift and secure transportation solutions. With a focus on
+              efficiency and reliability, we navigate through the intricacies of
+              supply chain management to ensure your goods reach their
+              destination on time. Our state-of-the-art tracking systems provide
+              real-time visibility, while our dedicated team of professionals
+              ensures the safe handling of your cargo. Whether it's local or
+              international, Capital Delivery is committed to delivering
+              excellence, making us the preferred choice for businesses seeking
+              a trusted and seamless logistics experience. Your satisfaction is
+              our priority, and your cargo is in capable hands with Capital
+              Delivery.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-wrap">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12 col-md-7">
+              <div class="copyright-text text-center fs-2">
+                <p>
+                  Copyright© <span>Capital Delivery </span> | All Rights
+                  Reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <!-- <button class="btn btn-warning">check swall functions</button> -->
+    <!--   <script>
             function presser(e) {
                 e.preventDefault()
                 
@@ -658,41 +663,41 @@
         </script>
  -->
 
-		<!-- JS here -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/jquery.meanmenu.min.js"></script>
-        <script src="js/ajax-form.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/paroller.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    <!-- JS here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-
-
-        <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/659dfccb8d261e1b5f515472/1hjoi6vlb';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    </body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/659dfccb8d261e1b5f515472/1hjoi6vlb";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
 </html>

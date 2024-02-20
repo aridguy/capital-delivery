@@ -293,8 +293,7 @@
       <!-- tracking-area-end -->
 
       <script>
-
-document.getElementById("myForm").onclick = function (e) {
+        document.getElementById("myForm").onclick = function (e) {
   e.preventDefault();
 
   // Retrieve the value of the tracking box
@@ -302,10 +301,10 @@ document.getElementById("myForm").onclick = function (e) {
 
   // Define tracking codes for each stage
   const trackCodes = [
-    "A1!b@2#C3$d1", // Stage 1
-    "A1!b@2#C3$d2", // Stage 2
-    "A1!b@2#C3$d3", // Stage 3
-    "A1!b@2#C3$d4"  // Stage 4
+    "A1!b@2#C3$d0", // Stage 1
+    "A1!b@2#C3$d1", // Stage 2
+    "A1!b@2#C3$d2", // Stage 3
+    "A1!b@2#C3$d3", // Stage 4
   ];
 
   // Select all li elements
@@ -315,34 +314,62 @@ document.getElementById("myForm").onclick = function (e) {
   for (let i = 0; i < trackCodes.length; i++) {
     // Check if the tracking box matches the current tracking code
     if (trackBox === trackCodes[i]) {
-        let timerInterval;
-Swal.fire({
-  title: "Tracking your package!",
-  html: "takes about 7 seconds.",
-  timer: 7500,
-  timerProgressBar: true,
-  didOpen: () => {
-    Swal.showLoading();
-    const timer = Swal.getPopup().querySelector("b");
-    timerInterval = setInterval(() => {
-      timer.textContent = `${Swal.getTimerLeft()}`;
-    }, 100);
-  },
-  willClose: () => {
-    clearInterval(timerInterval);
-  }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log("I was closed by the timer");
-    // Remove the class 'hidden' from the corresponding list item to show it
-     // Add "active" class to current and previous li elements
-     for (let j = 0; j <= i; j++) {
-        listItems[j].classList.add("active");
-      }
-  }
-});
-     
+      let timerInterval;
+      Swal.fire({
+        title: "Tracking your package!",
+        html: "takes about 7 seconds.",
+        allowOutsideClick: false,
+        timer: 7500,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const timer = Swal.getPopup().querySelector("b");
+          timerInterval = setInterval(() => {
+            timer.textContent = `${Swal.getTimerLeft()}`;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("I was closed by the timer");
+          // Remove the class 'hidden' from the corresponding list item to show it
+          // Add "active" class to current and previous li elements
+          for (let j = 0; j <= i; j++) {
+            listItems[j].classList.add("active");
+          }
+          // Show special message if Stage 4 is selected
+          if (i === 2) {
+            Swal.fire({
+              icon: "success",
+              title: "Congrats!",
+              text: "Your package has arrived at its destination!",
+            });
+          } if(i === 0){
+            Swal.fire({
+              title: "Congrats",
+              text: "Your package has been Dispatched",
+            });
+          } if(i === 1) {
+            Swal.fire({
+            //   icon: "success",
+              title: "Congrats!",
+              text: "Package on it's way to you",
+            });
+          }
+          if(i === 3) {
+            Swal.fire({
+            //   icon: "success",
+              title: "Congratulations!",
+              text: "Package has been delivered",
+            });
+          }
+        }
+        
+      });
+
       // Exit loop since a match is found
       return;
     }
@@ -350,6 +377,12 @@ Swal.fire({
 
   // If no match found, remove "active" class from all li elements
   listItems.forEach((li) => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Tracking code not valid",
+      footer: 'You have inserted either none or an invalid tracking code',
+    });
     li.classList.remove("active");
   });
 };
