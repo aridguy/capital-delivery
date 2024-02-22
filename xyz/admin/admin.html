@@ -60,12 +60,97 @@
                 </button>
               </form>
             </div>
+            <small>click to </small
+            ><strong class="cursor-pointer move mt-5" onclick="showResets()"
+              >Change password</strong
+            >
+            <div class="reset moveDown" id="resetSection">
+              <br />
+              <form id="resetLogins">
+                <p>
+                    <input
+                        class="form-control input"
+                        type="text"
+                        placeholder="Set new username"
+                        aria-label="Username reset"
+                        id="resetUsername"
+                        required
+                    />
+                </p>
+                <p>
+                    <input
+                        class="form-control input"
+                        type="password"
+                        placeholder="Set new password"
+                        aria-label="Password reset"
+                        id="resetKey"
+                        required
+                    />
+                </p>
+                <button type="submit" class="btn btn-danger">Reset</button>
+            </form>
+            </div>
           </div>
           <div class="col-md-4"></div>
         </div>
       </div>
     </section>
 
+    
+
+    <!-- RESET LOGIN DETAILS STARTS HERE -->
+  
+  
+  <script>
+      document.getElementById("resetLogins").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+  
+          // Retrieve username and password from input fields
+          const newUsername = document.getElementById("resetUsername").value;
+          const newPassword = document.getElementById("resetKey").value;
+  
+          // Create an object with the data to be sent
+          const newData = {
+              username: newUsername,
+              password: newPassword
+          };
+  
+          // Make a POST request to the endpoint
+          fetch("https://sheetdb.io/api/v1/pvktjphw9pn00", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(newData)
+          })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error("Network response was not ok");
+              }
+              return response.json(); // Parse response JSON
+          })
+          .then(data => {
+              console.log("Data successfully sent:", data);
+              // Optionally, you can perform additional actions after successful submission
+              // alert("Reset successful!");
+              Swal.fire("password as been reset successfully");
+              setTimeout(() => {
+                location.reload();
+            }, 2000);
+
+               // Reset form fields
+            document.getElementById("resetUsername").value = "";
+            document.getElementById("resetKey").value = "";
+          })
+          .catch(error => {
+              console.error("Error:", error);
+              // Handle errors from fetch or parsing response
+              alert("Error occurred while resetting. Please try again later.");
+          });
+      });
+  </script>
+  
+    <!-- LOGIN SCRIPT BELLOW STARTS HERE -->
     <script>
       document
         .getElementById("loginForm")
@@ -94,10 +179,17 @@
               );
               if (user) {
                 // If both username and password are correct, display success message
-                alert("Correct credentials");
+                // alert("Correct credentials");
+                swal.fire({
+                  text: "login successful",
+                });
+                window.location.href = "dashboard.html";
               } else {
                 // If either username or password is incorrect, display error message
-                alert("Wrong information supplied");
+                // alert("Wrong information supplied");
+                swal.fire({
+                  text: "that your login details no correct o bro",
+                });
               }
             })
             .catch((error) => {
@@ -106,6 +198,27 @@
             });
         });
     </script>
+    <!-- LOGIN SCRIPT ENDS HERE -->
+
+    <script>
+      function showResets() {
+        document.getElementById("resetSection").style.display = "block";
+      }
+    </script>
+
+    <style>
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      /* .input{
+        position: relative;
+        top: 3em;
+      } */
+      .moveDown {
+        margin-top: 32px;
+        display: none;
+      }
+    </style>
 
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>

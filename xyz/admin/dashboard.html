@@ -33,10 +33,41 @@
         <div class="row mt-5">
           <div class="col-md-4"></div>
           <div class="col-md-4 formBro">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            iste, recusandae eaque assumenda magnam fuga nihil impedit at
-            officia facere vitae neque laudantium veniam, mollitia dolore,
-            tempora harum eveniet esse.
+            <div class="formsPlace mt-5">
+              <form id="loginForm">
+                <p>
+                  <strong>Status</strong>
+                  <input
+                    id="status"
+                    class="form-control"
+                    type="text"
+                    aria-label="status"
+                    placeholder="status dispatched, departed, destination, successful "
+                    required
+                  />
+                </p>
+                <p>
+                  <strong>Details</strong>
+                  <input
+                    id="details"
+                    class="form-control"
+                    type="text"
+                    aria-label="text"
+                    placeholder="put percel details here"
+                    required
+                  />
+                </p>
+                <button class="btn btn-warning btn-block" type="submit">
+                  Login
+                </button>
+                <marquee
+                  >bro the first box is to set status of the good and the second
+                  box is to put the details of the goods based on the status you
+                  choose from the first one e.g  Your package has arrived 1461 Lady
+                  Bug Drive, Brooklyn [15.01.2024 : 3:02pm] <= something like that!</marquee
+                >
+              </form>
+            </div>
           </div>
           <div class="col-md-4"></div>
         </div>
