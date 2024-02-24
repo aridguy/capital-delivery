@@ -232,27 +232,26 @@
                   See current status of your parcel, provide your tracking
                   number below
                 </p>
-                <form id="myForm" class="tracking-id-form">
+                <div id="myForm" class="tracking-id-form">
                   <input
-                    id="trackPlace"
+                    id="trackers"
                     type="text"
                     placeholder="Tracking id"
                     maxlength="20"
                   />
-                  <button type="submit" class="btn red-btn">Tracking</button>
-                </form>
+                  <button id="updateStatus" type="submit" class="btn red-btn">
+                    Tracking
+                  </button>
+                </div>
                 <div class="tracking-list">
-                  <ul>
+                  <ul id="myList">
                     <li id="dropOne" class="">
                       <div class="tracking-list-icon">
                         <i class="flaticon-box"></i>
                       </div>
                       <div class="tracking-list-content">
                         <p>Dispatch</p>
-                        <small
-                          >Your package has arrived 1461 Lady <br />
-                          Bug Drive, Brooklyn [15.01.2024 : 3:02pm]
-                        </small>
+                        <small id="firstDetails"> </small>
                       </div>
                     </li>
                     <li class="">
@@ -261,12 +260,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>departed country</p>
-                        <small
-                          ><small
-                            >Your package has been shipped on 
-                            Port Newark <br> [15.01.2024 : 3:02pm]
-                          </small>
-                        </small>
+                        <small id="secondDetails"> </small>
                       </div>
                     </li>
                     <li class="">
@@ -275,11 +269,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>Destination</p>
-                        <small
-                          >Your package has arrived at Tin Can Sea Port, waiting
-                          for <br />
-                          clearing [15.01.2024 : 3:02pm]</small
-                        >
+                        <small id="thirdDetails"></small>
                       </div>
                     </li>
                     <li class="">
@@ -288,10 +278,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>Successful</p>
-                        <small
-                          >Your Package has been delivered to <br> (Address)
-                          [15.01.2024 : 3:02pm]</small
-                        >
+                        <small id="fourthDetails"></small>
                       </div>
                     </li>
                   </ul>
@@ -307,105 +294,123 @@
           </div>
         </div>
       </div>
+
+      <!-- script updating the package status when its check -->
+      <script>
+        document.getElementById("updateStatus").onclick = function (e) {
+          e.preventDefault();
+          let trackBoxId = document.getElementById("trackers").value;
+          fetch("https://sheetdb.io/api/v1/ez5zt14bwvyhm")
+            .then((response) => response.json()) // promise returns a response in JSON format
+            .then((data) => {
+              let extract = data.filter(
+                (trackData) => trackData?.trackingid === trackBoxId
+              );
+              if (!extract[0]) {
+                alert("Invalid Tracking ID");
+              } else {
+                const detailPlaces = extract[0].details;
+                const statusPlaces = extract[0].status;
+                document.getElementById("fourthDetails").innerHTML =
+                  '';
+                  document.getElementById("thirdDetails").innerHTML =
+                  '';
+                  document.getElementById("secondDetails").innerHTML =
+                  '';
+                  document.getElementById("firstDetails").innerHTML =
+                  '';
+                // console.log(detailPlaces);
+                // classList.remove("active");
+                const listItems = document.querySelectorAll("#myList li");
+                listItems.forEach((li) => li.classList.remove("active"));
+
+                // for the dispatched
+                if (statusPlaces === "Dispatched") {
+                  const firstLi = document.querySelector(
+                    "#myList li:first-child"
+                  );
+                  firstLi.classList.add("active");
+                  document.getElementById("firstDetails").innerHTML =
+                    detailPlaces;
+
+                  // for departed
+                } else if (statusPlaces === "Departed") {
+                  const firstLi = document.querySelector(
+                    "#myList li:first-child"
+                  );
+                  const secondLi = document.querySelector(
+                    "#myList li:nth-child(2)"
+                  );
+                  secondLi.classList.add("active");
+                  firstLi.classList.add("active");
+
+                  document.getElementById("secondDetails").innerHTML =
+                    detailPlaces;
+                } else if (statusPlaces === "Destination") {
+                  const firstLi = document.querySelector(
+                    "#myList li:first-child"
+                  );
+
+                  const secondLi = document.querySelector(
+                    "#myList li:nth-child(2)"
+                  );
+                  const thirdLi = document.querySelector(
+                    "#myList li:nth-child(3)"
+                  );
+                  firstLi.classList.add("active");
+                  secondLi.classList.add("active");
+                  thirdLi.classList.add("active");
+
+                  document.getElementById("thirdDetails").innerHTML =
+                    detailPlaces;
+                } else if (statusPlaces === "Successful") {
+                  const firstLi = document.querySelector(
+                    "#myList li:first-child"
+                  );
+
+                  const secondLi = document.querySelector(
+                    "#myList li:nth-child(2)"
+                  );
+                  const thirdLi = document.querySelector(
+                    "#myList li:nth-child(3)"
+                  );
+                  const fourthLi = document.querySelector(
+                    "#myList li:nth-child(4)"
+                  );
+                  firstLi.classList.add("active");
+                  secondLi.classList.add("active");
+                  thirdLi.classList.add("active");
+                  fourthLi.classList.add("active");
+                  document.getElementById("fourthDetails").innerHTML =
+                    detailPlaces;
+                }
+
+                // alert(" validated");
+              }
+              // console.log(extract, trackBoxId);
+            });
+        };
+
+        // updateStatus();
+      </script>
+
+      <style>
+        #successfulDetails {
+          display: none;
+        }
+        #dispatchedDetails {
+          display: none;
+        }
+        #departedDetails {
+          display: none;
+        }
+        #destinationDetails {
+          display: none;
+        }
+      </style>
+
       <!-- tracking-area-end -->
 
-      <script>
-        document.getElementById("myForm").onclick = function (e) {
-          e.preventDefault();
-
-          // Retrieve the value of the tracking box
-          let trackBox = document.getElementById("trackPlace").value;
-
-          // Define tracking codes for each stage
-          const trackCodes = [
-            "A1!b@2#C3$d0", // Stage 1
-            "A1!b@2#C3$d1", // Stage 2
-            "A1!b@2#C3$d2", // Stage 3
-            "A1!b@2#C3$d3", // Stage 4
-          ];
-
-          // Select all li elements
-          const listItems = document.querySelectorAll("#myList li");
-
-          // Iterate over each tracking code
-          for (let i = 0; i < trackCodes.length; i++) {
-            // Check if the tracking box matches the current tracking code
-            if (trackBox === trackCodes[i]) {
-              let timerInterval;
-              Swal.fire({
-                title: "Tracking your package!",
-                html: "takes about 7 seconds.",
-                allowOutsideClick: false,
-                timer: 7500,
-                timerProgressBar: true,
-                didOpen: () => {
-                  Swal.showLoading();
-                  const timer = Swal.getPopup().querySelector("b");
-                  timerInterval = setInterval(() => {
-                    timer.textContent = `${Swal.getTimerLeft()}`;
-                  }, 100);
-                },
-                willClose: () => {
-                  clearInterval(timerInterval);
-                },
-              }).then((result) => {
-                /* Read more about handling dismissals below */
-                if (result.dismiss === Swal.DismissReason.timer) {
-                  console.log("I was closed by the timer");
-                  // Remove the class 'hidden' from the corresponding list item to show it
-                  // Add "active" class to current and previous li elements
-                  for (let j = 0; j <= i; j++) {
-                    listItems[j].classList.add("active");
-                  }
-                  // Show special message if Stage 4 is selected
-                  if (i === 2) {
-                    Swal.fire({
-                      icon: "success",
-                      title: "Congrats!",
-                      text: "Your package has arrived at its destination!",
-                    });
-                  }
-                  if (i === 0) {
-                    Swal.fire({
-                      title: "Congrats",
-                      text: "Your package has been Dispatched",
-                    });
-                  }
-                  if (i === 1) {
-                    Swal.fire({
-                      //   icon: "success",
-                      title: "Congrats!",
-                      text: "Package on it's way to you",
-                    });
-                  }
-                  if (i === 3) {
-                    Swal.fire({
-                      //   icon: "success",
-                      title: "Congratulations!",
-                      text: "Package has been delivered",
-                    });
-                  }
-                }
-              });
-
-              // Exit loop since a match is found
-              return;
-            }
-          }
-
-          // If no match found, remove "active" class from all li elements
-          listItems.forEach((li) => {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Tracking code not valid",
-              footer:
-                "You have inserted either none or an invalid tracking code",
-            });
-            li.classList.remove("active");
-          });
-        };
-      </script>
       <style>
         #trackBox {
           display: none;
