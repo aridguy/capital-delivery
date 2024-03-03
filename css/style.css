@@ -3833,7 +3833,9 @@ label {
 	border-color: #e32222;
 }
 .tracking-list ul li.active .tracking-list-content p {
-	color: #e32222;
+    color: #e32222;
+    /* position: relative;
+    bottom: 1em; */
 }
 .tracking-help p {
 	line-height: 1.5;

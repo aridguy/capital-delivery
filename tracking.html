@@ -227,7 +227,7 @@
       <div class="tracking-area pt-95 pb-115">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-xl-12 col-lg-10">
+            <div class="col-xl-9 col-lg-10">
               <div class="tracking-id-info text-center">
                 <p>
                   See current status of your parcel, provide your tracking
@@ -250,9 +250,20 @@
                       <div class="tracking-list-icon">
                         <i class="flaticon-box"></i>
                       </div>
+                      <style>
+                        .guyOne {
+                          max-width: 200px; /* Adjust this value as needed */
+                          overflow: hidden;
+                          white-space: normal; /* Prevent line breaks */
+                          /* position: absolute; */
+                          display: inline-block;
+                          z-index: 0;
+                        }
+                      </style>
                       <div class="tracking-list-content">
                         <p>Dispatch</p>
-                        <small id="firstDetails"> </small>
+
+                        <small class="guyOne" id="firstDetails"></small>
                       </div>
                     </li>
                     <li class="">
@@ -261,7 +272,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>departed country</p>
-                        <small id="secondDetails"> </small>
+                        <small class="guyOne" id="secondDetails"></small>
                       </div>
                     </li>
                     <li class="">
@@ -270,7 +281,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>Destination</p>
-                        <small id="thirdDetails"></small>
+                        <small class="guyOne" id="thirdDetails"></small>
                       </div>
                     </li>
                     <li class="">
@@ -279,7 +290,7 @@
                       </div>
                       <div class="tracking-list-content">
                         <p>Successful</p>
-                        <small id="fourthDetails"></small>
+                        <small class="guyOne" id="fourthDetails"></small>
                       </div>
                     </li>
                   </ul>
