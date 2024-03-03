@@ -203,7 +203,7 @@ label {
 }
 /* button style */
 .btn {
-	-moz-user-select: none;
+	/* -moz-user-select: none; */
 	background: #ff4612 none repeat scroll 0 0;
 	border: medium none;
 	border-radius: 0;
@@ -987,7 +987,7 @@ label {
 	font-size: 14px;
 	line-height: 28px;
 	color: #c4c4c4;
-	user-select: none;
+	/* user-select: none; */
 }
 .modal-shipping-details .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
 	background-color: #ff4612;
